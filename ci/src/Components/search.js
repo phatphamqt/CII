@@ -1,24 +1,27 @@
 import React from 'react'
-import {Emoji} from '../Components/Emoji'
-
+import { emojiList } from '../resources/emojiList'
+import { Emoji } from './Emoji'
 class Mysearch extends React.Component{
     constructor(props){
         super(props)
-        this.state = {searchText:''}
-        this.EnterInput = this.EnterInput.bind(this)
+        this.state = {searchText:'',
+                array:[]
     }
+        this.EnterInput = this.EnterInput.bind(this)
+
+    }
+
     EnterInput(e){
-        this.setState({searchText:e.target.value})
-        console.log(Emoji(st))
-        let st = this.state.searchText
-        return Emoji(st)
+        this.setState({searchText:e.target.value,
+            array:Emoji(e.target.value)
+        })
     }
     render(){ 
+
     return <div>
         <input type="text" onChange={this.EnterInput} id="text"></input>
-        
-    </div>
-    
+        <p>{this.state.array} </p>
+        </div> 
     }
 }    
 
