@@ -5,22 +5,22 @@ class Mysearch extends React.Component{
     constructor(props){
         super(props)
         this.state = {searchText:'',
-                array:[]
+        arr:''    
     }
-        this.EnterInput = this.EnterInput.bind(this)
-
+        this.EnterInput = this.EnterInput.bind(this)       
     }
 
     EnterInput(e){
-        this.setState({searchText:e.target.value,
-            array:Emoji(e.target.value)
-        })
+        this.setState({searchText:e.target.value})
+        let st = this.state.searchText
+        this.setState({arr:Emoji(st)})          
     }
+    
     render(){ 
 
     return <div>
         <input type="text" onChange={this.EnterInput} id="text"></input>
-        <p>{this.state.array} </p>
+        <p>{this.state.arr} </p>
         </div> 
     }
 }    
