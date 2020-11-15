@@ -1,6 +1,8 @@
 import React from 'react'
 import { emojiList } from '../resources/emojiList'
 import { Emoji } from './Emoji'
+
+
 class Mysearch extends React.Component{
     constructor(props){
         super(props)
@@ -15,12 +17,11 @@ class Mysearch extends React.Component{
         let st = this.state.searchText
         this.setState({arr:Emoji(st)})          
     }
-    
     render(){ 
 
     return <div>
         <input type="text" onChange={this.EnterInput} id="text"></input>
-        <p>{this.state.arr} </p>
+        <div>{this.state.arr} </div>
         </div> 
     }
 }    

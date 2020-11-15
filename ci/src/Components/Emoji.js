@@ -11,14 +11,16 @@ export function Emoji (st){
         }
         return false;
       })
-    console.log(arr)
+    // console.log(arr)
+    // console.log(arr.length)
+    let elist = ""
     for(let li=0;li<arr.length;li++) {
-      console.log(arr[li])
+        elist += `${arr[li].symbol} ${arr[li].title}`
+    }  
     return <h2>
-        {arr[li].symbol} {arr[li].title}
+      {elist}   
     </h2>
-
-    }
-   
     
 }
+   
+    
