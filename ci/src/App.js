@@ -1,13 +1,11 @@
 import React from 'react'
 import './App.css';
-import { Emoji } from './Components/Emoji';
-import {Myheader} from './Components/header.js'
-import Mysearch from './Components/search.js';
-import {emojiList} from './resources/emojiList.js'
+import {Myhead} from './Components/Header'
+import {Body} from './Components/Body'
 
 export default function App(){
   return<div>
-      <Myheader></Myheader>
-      <Mysearch></Mysearch>
+    <Myhead></Myhead>
+    <Body></Body>
   </div>
 }
